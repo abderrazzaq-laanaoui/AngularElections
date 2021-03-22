@@ -1,0 +1,18 @@
+li{
+  display: inline;
+  margin: 10px 5px;
+
+}
+a{
+  color: black;
+  transition-duration: 1s;
+  padding: 10px 50px;
+  text-decoration: none;
+  font-size: 20px;
+  font-family: Bahnschrift;
+}
+a:hover{
+  background-color: white;
+  color: black;
+  border-radius: 20px;
+}
