@@ -3,10 +3,26 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HeaderComponent } from './components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { AddPartieComponent } from './components/add-partie/add-partie.component';
+import { ListPartieComponent } from './components/list-partie/list-partie.component';
+import { ErrorComponent } from './components/error/error.component';
+import { PartiesComponent } from './components/parties/parties.component';
+import { VoterComponent } from './components/voter/voter.component';
+import { ResultatsComponent } from './components/resultats/resultats.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeaderComponent,
+    FooterComponent,
+    AddPartieComponent,
+    ListPartieComponent,
+    ErrorComponent,
+    PartiesComponent,
+    VoterComponent,
+    ResultatsComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Lucida Bright";
+}
+
+app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: mediumpurple;
+  color: black;
+}
+
+app-footer {
+  width: 100%;
+  text-align: center;
+  position: fixed;
+  bottom: 0px;
+  background-color: mediumpurple;
+  color: black;
+  padding: 10px;
+}
