@@ -10,8 +10,8 @@ import {Partie} from '../../models/Partie';
 })
 export class AddPartieComponent implements OnInit {
   addForm = new FormGroup({
-    nom : new FormControl(''),
-    date : new FormControl(''),
+    nom : new FormControl('',[Validators.required,Validators.minLength(3)]),
+    date : new FormControl('',Validators.required),
     description : new FormControl('',[Validators.required,Validators.minLength(10)])
   });
 
@@ -25,10 +25,9 @@ export class AddPartieComponent implements OnInit {
     let nom = this.addForm.getRawValue().nom.trim();
     let date = this.addForm.getRawValue().date.trim();
     let description = this.addForm.getRawValue().description.trim();
-    if(nom!== "" && date !== "" && description !== "")
-        if(this.service.praties.push(new Partie(nom,description,date)))
+    if(this.addForm.valid)
+        if(this.service.addPartie(new Partie(nom,description,date)))
           this.addForm.reset();
     }
-
 }
 

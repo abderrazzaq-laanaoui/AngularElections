@@ -32,7 +32,8 @@ export class AppService {
 
   }
   public addPartie(partie: Partie): boolean {
-    if(this._praties.find(p => p.nom === partie.nom) !== undefined)
+    console.log("hello");
+    if(this._praties.find(p => p.nom === partie.nom) != null)
       return false;
     this._praties.push(partie);
     return true;
