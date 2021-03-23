@@ -1,18 +1,13 @@
 <div class="container">
   <h3>Voter Pour une Partie</h3>
-  <div>
-    <input type="text" placeholder="CIN">
-    <input type="text" placeholder="NOM">
-    <input type="text" placeholder="PRENOM">
-    <select name="parties" id="">
-      <option value="">1</option>
-      <option value="">2</option>
-      <option value="">3</option>
-      <option value="">4</option>
-      <option value="">5</option>
-      <option value="">6</option>
+  <form [formGroup]="voteForm" > <!-- (ngSubmit)="onSubmit()"-->
+    <input formControlName="cin" type="text" placeholder="CIN">
+    <input  formControlName="nom" type="text" placeholder="NOM">
+    <input  formControlName="prenom" type="text" placeholder="PRENOM">
+    <select formControlName="partie"  name="parties" >
+      <option *ngFor="let partie of parties">{{partie.nom}}</option>
     </select>
-  </div>
-  <button>Voter</button>
+    <button type="submit">Voter</button>
+  </form>
 
 </div>

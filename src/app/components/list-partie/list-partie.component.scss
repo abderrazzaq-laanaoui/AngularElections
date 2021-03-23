@@ -5,13 +5,10 @@ table {
 }
 
 th {
+  padding: 10px;
   background-color: mediumpurple;
   color: black;
   text-transform: uppercase;
-  border: 10px solid mediumpurple;
+  border: 1px solid #000000;
 }
 
-td {
-  border: 1px solid #dddddd;
-  padding: 8px;
-}

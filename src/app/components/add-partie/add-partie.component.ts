@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {FormControl, FormGroup, Validators} from '@angular/forms';
+import {AppService} from '../../services/app.service';
+import {Partie} from '../../models/Partie';
 
 @Component({
   selector: 'app-add-partie',
@@ -6,10 +9,26 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./add-partie.component.scss']
 })
 export class AddPartieComponent implements OnInit {
+  addForm = new FormGroup({
+    nom : new FormControl(''),
+    date : new FormControl(''),
+    description : new FormControl('',[Validators.required,Validators.minLength(10)])
+  });
 
-  constructor() { }
+
+  constructor(private service:AppService) { }
 
   ngOnInit(): void {
   }
 
+  onSubmit() {
+    let nom = this.addForm.getRawValue().nom.trim();
+    let date = this.addForm.getRawValue().date.trim();
+    let description = this.addForm.getRawValue().description.trim();
+    if(nom!== "" && date !== "" && description !== "")
+        if(this.service.praties.push(new Partie(nom,description,date)))
+          this.addForm.reset();
+    }
+
 }
+

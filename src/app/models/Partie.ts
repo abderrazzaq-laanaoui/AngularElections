@@ -2,15 +2,13 @@ import { Citoyen } from "./Citoyen";
 
 export class Partie{
   private _nom:string;
-  private _descr:string;
+  private _description:string;
   private _dateCreation:string;
-  private _citoyenVotes:Array<Citoyen>;
 
-  constructor(nom: string, descr: string, dateCreation: string, citoyenVotes: Array<Citoyen>) {
+  constructor(nom: string, description: string, dateCreation: string) {
     this._nom = nom;
-    this._descr = descr;
+    this._description = description;
     this._dateCreation = dateCreation;
-    this._citoyenVotes = citoyenVotes;
   }
 
   get nom(): string {
@@ -21,12 +19,12 @@ export class Partie{
     this._nom = value;
   }
 
-  get descr(): string {
-    return this._descr;
+  get description(): string {
+    return this._description;
   }
 
-  set descr(value: string) {
-    this._descr = value;
+  set descripion(value: string) {
+    this._description = value;
   }
 
   get dateCreation(): string {
@@ -37,11 +35,4 @@ export class Partie{
     this._dateCreation = value;
   }
 
-  get citoyenVotes(): Array<Citoyen> {
-    return this._citoyenVotes;
-  }
-
-  set citoyenVotes(value: Array<Citoyen>) {
-    this._citoyenVotes = value;
-  }
 }

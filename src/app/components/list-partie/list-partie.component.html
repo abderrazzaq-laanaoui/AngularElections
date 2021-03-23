@@ -7,15 +7,9 @@
     <th>Date de Creation</th>
     <th>Description</th>
   </tr>
-  <tr>
-    <td>Jill</td>
-    <td>4-02-2020</td>
-    <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.  </td>
-  </tr>
-  <tr>
-    <td>Eve</td>
-    <td>5-1-2010</td>
-    <td>Lorem ipsum dolor.</td>
-  </tr>
   </thead>
+  <tbody>
+  <tr app-partie *ngFor="let partie of parties"  [partie]="partie" ></tr>
+  </tbody>
+
 </table>

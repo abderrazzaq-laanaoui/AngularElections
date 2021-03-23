@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -11,6 +12,7 @@ import { ErrorComponent } from './components/error/error.component';
 import { PartiesComponent } from './components/parties/parties.component';
 import { VoterComponent } from './components/voter/voter.component';
 import { ResultatsComponent } from './components/resultats/resultats.component';
+import { PartieComponent } from './components/partie/partie.component';
 
 @NgModule({
   declarations: [
@@ -22,11 +24,13 @@ import { ResultatsComponent } from './components/resultats/resultats.component';
     ErrorComponent,
     PartiesComponent,
     VoterComponent,
-    ResultatsComponent
+    ResultatsComponent,
+    PartieComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
