@@ -1,6 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {Partie} from '../../models/Partie';
-import {AppService} from '../../services/app.service';
+import {Partie} from '../../../../models/Partie';
+import {AppService} from '../../../../services/app.service';
 
 @Component({
   selector: '[app-partie]',
@@ -16,4 +16,7 @@ export class PartieComponent implements OnInit {
 
   }
 
+  delete(nom:string) {
+    this.service.removePartie(nom);
+  }
 }

@@ -1,13 +1,15 @@
 <div class="container">
   <h3>Voter Pour une Partie</h3>
-  <form [formGroup]="voteForm" > <!-- (ngSubmit)="onSubmit()"-->
+  <form [formGroup]="voteForm" (ngSubmit)="onSubmit()">
     <input formControlName="cin" type="text" placeholder="CIN">
     <input  formControlName="nom" type="text" placeholder="NOM">
     <input  formControlName="prenom" type="text" placeholder="PRENOM">
     <select formControlName="partie"  name="parties" >
+      <option selected disabled value=""></option>
       <option *ngFor="let partie of parties">{{partie.nom}}</option>
     </select>
-    <button type="submit">Voter</button>
+    <button type="submit" >Voter</button>
   </form>
+  <app-error *ngIf="errMessage != ''" [errorMessage]="errMessage"></app-error>
 
 </div>

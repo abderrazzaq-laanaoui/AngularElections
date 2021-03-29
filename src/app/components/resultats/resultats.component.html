@@ -7,16 +7,7 @@
     <th>Nombres De Vote</th>
     <th>Pourcentage</th>
   </tr>
-  <tr>
-    <td>Jill</td>
-    <td>4</td>
-    <td>50%</td>
-  </tr>
-  <tr>
-    <td>Eve</td>
-    <td>5</td>
-    <td>94%</td>
-  </tr>
+  <tr app-resultat-row *ngFor="let partie of parties"  [partie]="partie"></tr>
   </thead>
 </table>
 </div>

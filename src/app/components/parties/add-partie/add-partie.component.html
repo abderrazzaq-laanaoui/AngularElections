@@ -1,0 +1,8 @@
+<h3>Ajouter Une Partie</h3>
+<form [formGroup]="addForm" (ngSubmit)="onSubmit()">
+  <input (input)="getErrorMessage()" type="text"  formControlName="nom"  placeholder="Nom du Partie">
+  <input (input)="getErrorMessage()" type="date" formControlName="date" placeholder="Date De Creation">
+  <textarea (input)="getErrorMessage()" rows="5" formControlName="description" placeholder="Description"></textarea>
+  <app-error *ngIf="errMessage != ''" [errorMessage]="errMessage" ></app-error>
+  <button type="submit" [disabled]="!addForm.valid">Ajouter</button>
+</form>

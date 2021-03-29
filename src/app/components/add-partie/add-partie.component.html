@@ -1,9 +1,0 @@
-<h3>
-  Ajouter Une Partie</h3>
-<form [formGroup]="addForm" (ngSubmit)="onSubmit()">
-  <input type="text"  formControlName="nom"  placeholder="Nom du Partie">
-  <input type="date" formControlName="date" placeholder="Date De Creation">
-  <textarea rows="5" formControlName="description" placeholder="Description"></textarea>
-  <button type="submit">Ajouter</button>
-
-</form>

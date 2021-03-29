@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {Partie} from '../../models/Partie';
+import {AppService} from '../../services/app.service';
 
 @Component({
   selector: 'app-resultats',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ResultatsComponent implements OnInit {
 
-  constructor() { }
+  public parties: Array<Partie>;
+
+  constructor(private service :AppService) {
+  }
 
   ngOnInit(): void {
+    this.parties = this.service.praties;
   }
+
 
 }
