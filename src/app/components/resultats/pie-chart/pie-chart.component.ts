@@ -1,4 +1,4 @@
-import { Component, ViewChild } from "@angular/core";
+import {Component, OnInit, ViewChild} from '@angular/core';
 import { ChartComponent } from "ng-apexcharts";
 
 import {
@@ -20,19 +20,18 @@ export type ChartOptions = {
   templateUrl: "./pie-chart.component.html",
   styleUrls: ["./pie-chart.component.scss"]
 })
-export class PieChartComponent {
+export class PieChartComponent implements OnInit{
   @ViewChild("chart") chart: ChartComponent;
   public chartOptions: Partial<ChartOptions>;
 
   constructor(private service: AppService) {
-    console.log(service.praties.forEach(p => p.nom));
     this.chartOptions = {
-      series: [44, 55, 13, 43, 22],
+      series: this.service.praties.map(p => this.service.getVoters(p.nom)),
       chart: {
         width: 380,
         type: "pie"
       },
-      labels: ["Team A", "Team B", "Team C", "Team D", "Team E"],
+      labels: this.service.praties.map(p=>p.nom),
       responsive: [
         {
           breakpoint: 480,
@@ -47,5 +46,10 @@ export class PieChartComponent {
         }
       ]
     };
+  }
+
+  ngOnInit(): void {
+    console.log();
+
   }
 }
