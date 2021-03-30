@@ -13,8 +13,10 @@ app-add-partie{
 
 app-list-partie{
   text-align: center;
-  width: 70%;
-  min-width: 700px;
+  width: 100%;
+  max-width: 900px;
+  min-width: 400px;
+  overflow-x: scroll;
 }
 
 h2 {

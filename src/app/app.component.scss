@@ -9,16 +9,16 @@ app-header {
   justify-content: space-between;
   align-items: center;
   padding: 10px;
-  background-color: mediumpurple;
+  background-color: #328a56;
+  flex-direction: column;
   color: black;
-}
-
+  overflow-x: hidden;}
 app-footer {
   width: 100%;
   text-align: center;
   position: fixed;
   bottom: 0px;
-  background-color: mediumpurple;
+  background-color: #328a56;
   color: black;
   padding: 10px;
 }

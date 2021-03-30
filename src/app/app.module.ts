@@ -14,6 +14,9 @@ import { VoterComponent } from './components/voter/voter.component';
 import { ResultatsComponent } from './components/resultats/resultats.component';
 import { PartieComponent } from './components/parties/list-partie/partie/partie.component';
 import { ResultatRowComponent } from './components/resultats/resultat-row/resultat-row.component';
+import { PieChartComponent } from './components/resultats/pie-chart/pie-chart.component';
+import {NgApexchartsModule} from 'ng-apexcharts';
+
 
 @NgModule({
   declarations: [
@@ -27,12 +30,14 @@ import { ResultatRowComponent } from './components/resultats/resultat-row/result
     VoterComponent,
     ResultatsComponent,
     PartieComponent,
-    ResultatRowComponent
+    ResultatRowComponent,
+    PieChartComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgApexchartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
